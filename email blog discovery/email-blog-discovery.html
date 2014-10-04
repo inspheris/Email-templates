@@ -1,0 +1,610 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Email blog Discovery</title>
+        <style type="text/css">
+            /* Based on The MailChimp Reset INLINE: Yes. */  
+            /* Client-specific Styles */
+            #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+            @font-face {
+                font-family: 'MyriadPro-Regular';
+                src: url('fonts/MyriadPro-Regular.otf') format('opentype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'Open Sans Bold';
+                src:url('fonts/OpenSans-Bold.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            
+            @font-face {
+                font-family: 'Open Sans Regular';
+                src:url('fonts/OpenSans-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            
+            body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; background-color: #FFF;font-size:16px;
+                 font-family: "Open Sans Regular", sans-serif;
+                 color:#666;
+            } 
+            /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+            .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
+            .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+            /* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+            #backgroundTable {margin:0; padding:0; width:100% !important;  background-color: #FFF;}
+            /* End reset */
+            h1{
+                font-family: "Open Sans Bold";
+                font-size: 40px;
+            }
+            h1 span{
+                font-family: "Open Sans Regular";
+                font-size: 40px;
+            }
+            .sans-bold{ font-family: "Open Sans Regular"; }
+            /* Some sensible defaults for images
+            Bring inline: Yes. */
+            img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+            a img {border:none;} 
+            .image_fix {display:block;}
+
+            /* Yahoo paragraph fix
+            Bring inline: Yes. */
+            p {margin: 10px 0px 5px 0px;line-height: 25px;text-align: justify}
+
+            /* Hotmail header color reset
+            Bring inline: Yes. */
+            h1, h2, h3, h4, h5, h6 {color: #fff; !important;}
+
+            h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: #CE3A3A !important;}
+
+            h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+                color: #CE3A3A !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+            }
+
+            h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+                color: #CE3A3A !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+            }
+            h3{color:black}
+            h2{padding: 0% 0% 0% 0%;margin: 4px;font-size: 25px; }
+            /* Outlook 07, 10 Padding issue fix
+            Bring inline: No.*/
+            table td {border-collapse: collapse;}
+
+
+            /* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+            Bring inline: Yes. */
+            a {color: #CE3A3A;text-decoration: none;}
+
+            .quote{font-size: 50px;}
+            .colorred { color:#CC4342;}
+
+            .colorblue { color:#139AC7;
+                         font-size: 18px; }
+
+            .colorblak { color:#000; 
+                         font-size: 18px;}
+
+            .colorintelliegent { color:#149bc8;font-size: 18px; }
+
+            .colorefficase { color:#719f42;font-size: 18px; }
+
+            .colorgreen { color:#669966;font-size: 18px; }
+            .colorgreen-light {color :#719F42;font-size: 18px;}
+
+            .colorgray { color:#666;font-size: 18px; }
+            .inside{
+                width:85%;
+                height:40%;
+                margin:0 auto;  
+                margin-top: 15px;
+                padding: 10px;
+/*                background:#7f7f7f;
+                background:rgba(255,255,255,0.5);*/
+                background-color: #ffffff;
+                opacity: 0.6;
+                filter: alpha(opacity=60); /* For IE8 and earlier */
+                box-shadow: 0px 0px 10px #F1F1F1;
+            }
+            .inside p{
+                font-family: "Open Sans Regular";
+                font-size: 18px;
+                color: black;
+            }
+            .bg{
+/*                background: url(images/background-large.png);*/
+                height: 700px;
+                background-repeat: no-repeat;  
+                position: relative;        
+                width: 100%;
+                margin-left: auto; 
+                margin-right: auto;
+            }
+            
+             @media only screen and (min-device-width: 480px) {
+                .bg{
+                    background: url(images/background-480.png);
+                    background-repeat: no-repeat; 
+                    height: 215px;
+                }
+            }
+            @media only screen and (min-device-width: 600px) {
+                .bg{
+                    background: url(images/background-600.png);
+                    background-repeat: no-repeat; 
+                    height: 323px;
+                }
+            }
+            @media only screen and (min-device-width: 800px) {
+                .bg{
+                    background: url(images/background-800.png);
+                    background-repeat: no-repeat; 
+                    height: 431px;
+                }
+
+            }
+            @media only screen and (min-device-width: 870px) {
+                .bg{
+                    background: url(images/background-870.png);
+                    background-repeat: no-repeat; 
+                    height: 469px;
+                }
+
+            }
+            @media only screen and (min-device-width: 900px) {
+                .bg{
+                    background: url(images/background-900.png);
+                    background-repeat: no-repeat; 
+                    height: 485px;
+                }
+            }
+            @media only screen and (min-device-width: 1024px) {
+               .bg{
+                    background: url(images/background-1024.png);
+                    background-repeat: no-repeat; 
+                    height: 730px;
+                }
+            }
+            @media only screen and (min-device-width: 1280px) {
+               .bg{
+                    background: url(images/background-1024.png);
+                    background-repeat: no-repeat; 
+                    height: 690px;
+                }
+            }
+            @media only screen and (min-device-width: 1326px) {
+               .bg{
+                    background: url(images/background-1024.png);
+                    background-repeat: no-repeat; 
+                    height: 715px;
+                }
+            }
+            @media only screen and (min-device-width: 1900px) {
+                .bg{
+                    background: url(images/background-1900.png);
+                    background-repeat: no-repeat; 
+                    height: 1024px;
+                }
+            }
+            /***************************************************
+            ****************************************************
+            MOBILE TARGETING
+            ****************************************************
+            ***************************************************/
+            
+            /* More Specific Targeting */
+
+            @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+                /* You guessed it, ipad (tablets, smaller screens, etc) */
+                /* repeating for the ipad */
+                a[href^="tel"], a[href^="sms"] {
+                    text-decoration: none;
+                    color: #CE3A3A; /* or whatever your want */
+                    pointer-events: none;
+                    cursor: default;
+                }
+                #footer a[href^="tel"], a[href^="sms"] {
+                    text-decoration: underline;
+                    color: #808080; /* or whatever your want */
+                    pointer-events: none;
+                    cursor: default;
+                }
+            }
+
+            @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+                /* Put your iPhone 4g styles in here */ 
+            }
+
+            /* Android targeting */
+            @media only screen and (-webkit-device-pixel-ratio:.75){
+                /* Put CSS for low density (ldpi) Android layouts in here */
+            }
+            @media only screen and (-webkit-device-pixel-ratio:1){
+                /* Put CSS for medium density (mdpi) Android layouts in here */
+            }
+            @media only screen and (-webkit-device-pixel-ratio:1.5){
+                /* Put CSS for high density (hdpi) Android layouts in here */
+            }
+            /* end Android targeting */
+
+        </style>
+
+        <!-- Targeting Windows Mobile -->
+        <!--[if IEMobile 7]>
+        <style type="text/css">
+        
+        </style>
+        <![endif]-->   
+
+        <!-- ***********************************************
+        ****************************************************
+        END MOBILE TARGETING
+        ****************************************************
+        ************************************************ -->
+
+        <!--[if gte mso 9]>
+            <style>
+            /* Target Outlook 2007 and 2010 */
+            </style>
+        <![endif]-->
+    </head>
+    <body>
+        <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
+            <tr>
+                <td valign="top" align="center"> 
+                    <!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
+                    <table cellpadding="0" cellspacing="0" border="0" align="center" width="90%">
+                        <tr>
+                            <td colspan="3" width="90%" height="40">&nbsp;</td>
+                        </tr>
+                        <tr style="background-color: #F5F5F0;">
+                            <td width="7%" valign="top"></td>
+                            <td width="85%" valign="top">
+                                <table cellpadding="0" cellspacing="0" border="0" align="center">             
+                                    <tr >
+                                        <td colspan="3" >&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="left" valign=middle width="60%" height="120" style="width: 100%; height: 120px;padding-right: 0%">
+                                            <a href="http://www.inspheris.com" target ="_blank" title="inspheris.com" style="text-decoration: none;">
+                                                <img class="image_fix" align="left" src="images/logo.png" alt="Inspheris" title="Inspheris" height="60"  />
+                                            </a>
+                                        </td>
+                                        <td width="5%">&nbsp;&nbsp;&nbsp;</td>
+                                    </tr>
+                                    <tr style="height: 11px;background: #656564">
+                                        <td colspan="3"></td>
+                                    </tr>
+                                    <tr class="bg">
+                                        <td colspan="3" width="100%" align="justify" valign="top" style="font-size: 25px;font-weight: 700; line-height: 44px;text-align: center; ">
+                                            <h2 class="colorred" style="font-size: 30px;">
+                                                Profitez des derniers rayons de soleil<br /> de l’été sur le blog Inspheris
+                                            </h2>
+                                            <div class="inside">
+                                                <p>
+                                                <strong class="colorblak">L’été touche à sa fin.</strong>
+                                                La rentrée est déjà bien commencée, et l’automne pointe déjà le bout de son nez. Venez profitez des dernières couleurs de l’été sur le <a href="#">blog Inspheris</a> : un blog d’idées pour entreprise innovantes. Avis d’experts, retours d’expériences, événements… toute l’actualité de l’entreprise collaborative et de l’intranet nouvelle génération !
+                                                </p>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" >
+                                            <img src="images/header-img.png" width="100%" height="350" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" width="100%" style="border-top: 10px solid #444444;">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="padding: 0 11%;" valign="top">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="2"><div class="colorblak" style="text-align: center;font-size: 33px;line-height: 40px;  font-family: 'Open Sans Bold'; ">                                                              
+                                                                    <strong>
+                                                                        
+                                                        Big data ou l’eldorado de la recherche en  entreprise
+                                                                    </strong>
+                                                                </div></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <br />
+                                                            <img src="images/illution.png" width='100%'/> 
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" >
+                                                            <h2 class="sans-bold" style="color:black;text-align: justify">
+                                                                  Une seule interface pour rechercher toute l’information de l’entreprise, illusion ou réalité ? Résultat ? Le big data est devenu un service majeur de l'intranet à proposer à vos utilisateurs.                                                                  
+                                                            </h2>
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="2">
+                                                                        <p style="font-size: 17px;line-height: 25px;margin-top: 0px;">    L’intranet est plus que jamais le point de convergence de toutes les données de l’entreprise. La multiplication des données stockées dans des applications de plus en plus interopérables a favorisé cette évolution vers un intranet “redistributeur d’informations”.  </p>           </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                                        <p style="font-size: 17px;line-height: 25px;margin-top: 0px;">    Au sein d'un intranet enrichi d’un réseau social d’entreprise, le volume d’informations produit est encore plus considérable : articles et quickposts, commentaires, like, partages, notifications, fiche-profil, expertises, tags, votes, sondages.    </p>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                   <tr>
+                                                        <td colspan="2">
+                                                                        <p style="font-size: 17px;line-height: 25px;margin-top: 0px;"> Cette dimension portail est une consécration pour l’intranet mais pose aujourd’hui de nouvelles questions : Comment tirer profit de cette masse hétérogène d’informations, si possible en temps réel ? 
+  </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                                        <p style="font-size: 17px;line-height: 25px;margin-top: 0px;"> Les solutions traditionnelles de recherche ne peuvent répondre à l’enjeu. C’est là que le big data intervient. 
+  </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                                        <p style="font-size: 17px;line-height: 25px;margin-top: 0px;">Dans votre intranet, le big data permet de visualiser l’ensemble de vos informations, d’où qu’elles viennent, dans une interface unifiée et cohérente.  L’intranet devient un véritable hub d’informations qu’il met en forme et restitue de façon intelligible. Le big data couplé à l’intranet permet de gagner en précision et en rapidité dans les recherches. Par exemple, en faisant ressortir les collègues, les fichiers et les données les plus pertinentes et importantes pour le travail des utilisateurs. Avec le big data vous pouvez croiser et interroger les données afin de rendre votre entreprise plus agile. 
+
+  </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h2 class="colorblak"  style="font-size: 22px;line-height: 25px;text-align: justify">
+                                                                Résultat ? Le big data est devenu un service majeur de l’intranet à proposer à vos utilisateurs.
+                                                            </h2>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" height="25" valign="bottom">
+                                                            <span class="colorgreen"><strong>Quelles applications pour votre Intranet social ?
+                                                                </strong></span>   
+                                                        </td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <p>
+                                                                &nbsp; &nbsp; &nbsp; &nbsp; <span><img style="margin-top:2px;" src="images/arrow.png" /></span> &nbsp;Offrir une vision consolidée des conversations pour l’utilisateur : que se dit-il sur mes sujets de prédilection ? quelles sont les tendances ou sujets d’importance du moment à ne pas rater ? 
+                                                            </p> 
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                            <p>
+                                                                &nbsp; &nbsp; &nbsp; &nbsp; <span><img src="images/arrow.png" /></span> &nbsp;Détecter les signaux forts et signaux faibles dans les échanges : l’analyse des mots-clés sur une période permet de repérer les préoccupations des salariés et le climat général
+                                                            </p> 
+                                                        </td>
+
+                                                    </tr>
+                                                   <tr>
+                                                        <td colspan="2">
+                                                            <p>
+                                                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span><img src="images/arrow.png" /></span> &nbsp;En terme de pilotage : mesurer l’engagement par la somme des interactions sociales, établir une cartographie des utilisateurs en faisant ressortir les groupes, les compétences, analyser les contenus produits.
+                                                            </p> 
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h2 class="colorblue"  style="font-size: 22px;line-height: 25px;text-align: justify"> Comment ?        </h2>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                                        <p style="font-size: 17px;line-height: 25px;margin-top: 0px;">L’ensemble des sources de données abritées par l’intranet constitue un “entrepôt de données” virtuel que le moteur de recherche intranet va interroger de façon globale. Ceci est rendu possible en homogénéisant l’indexation de toutes les bases. Les analyses se basent sur des critères linguistiques, sémantiques, statistiques, qui enrichiront la recherche avec des analyses plus qualitatives (en identifiant par exemple les personnes, les lieux, l’organisation, les communautés, les sentiments, les appréciations positives ou négatives…). Cette nouvelle génération de moteur de recherche structure les données de façon intelligente et est plus pertinente dans ses réponses.
+  </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <h2 class="colorred"  style="font-size: 22px;line-height: 25px;text-align: justify"> Et chez Inspheris ?        </h2>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">
+                                                                        <p style="font-size: 17px;line-height: 25px;margin-top: 0px;">La solution Intranet social de Inspheris fournit une solution de recherche ouverte qui s’interface nativement avec les sources de données de l’entreprise. Cette interopérabilité permet de traiter un très gros volume de données, le tout plus rapidement grâce au moteur intégré dans l’application.
+  </p>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    
+                                                    <tr style="background-color: #f2f2f2;">
+                                                        <td colspan="2" style="padding:8px 15px;">
+                                                            <p style="font-size: 18px;"><a href="#" class="colorred"><strong>Inspheris </strong></a> <span style="color:black"> propose une solution logicielle de communication et de partage qui permet à votre entreprise de déployer une véritable stratégie 2.0</span></p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" height="25" valign="bottom">
+                                                            <p style="text-align: center;">   <span class="colorblak"><strong>Vous aussi,</strong></span> entrez dans la nouvelle génération des intranets </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr style="background: #cd3838; height: 125px;">
+                                                        <td colspan="2">
+                                                            <table width="100%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td width="50%">
+                                                                            <a href="http://www.inspheris.com/contactez-nous.html" title="Contact to inspheris" target="_new">
+                                                                                <div style="padding: 1%;text-align: center">
+                                                                                    <h1>
+                                                                                        DEMANDEZ
+                                                                                    </h1>
+                                                                                    <p style="color:white;text-align: center">
+                                                                                        <strong>
+                                                                                            une présentation personnalisée en ligne
+                                                                                        </strong>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </a>
+                                                                        </td>
+                                                                        <td width="50%" style="background: #f2f2f2">
+                                                                            <div class="contact-box" style="text-align: center;color:#999;">
+                                                                                <table width="100%" align="center" >
+                                                                                    <tr height="40" >
+                                                                                        <td width="30"><img title="Email" alt="Email" src="images/attherare.png" ></td>
+                                                                                        <td width="70" align="left">info@inspheris.com</td>                                                                                   </tr>
+                                                                                    <tr>
+                                                                                        <td><img src="images/telephone.png" title="Phone" alt="Phone" /></td>
+                                                                                        <td align="left">+33 9 72 35 12 70</td>                                                                                   </tr>
+                                                                                </table>
+                                                                                <strong>
+
+                                                                                </strong>
+                                                                                </p>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+
+                                        </td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" width="100%" height="10" style="border-bottom: 5px solid  #b3b3b3;">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" width="100%">
+                                            <p style="text-align: center"><span class="colorblak">A suivre dans notre série Intranet nouvelle génération</span> :</p>                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" align="center">
+                                            <table class="episode">
+                                                <tr height="35">
+                                                    <td ><img title="Episode-1" alt="Episode-1" src="images/episode-1.png" /></td>
+                                                    <td style="padding-left: 15px;">
+                                                        <strong>
+                                                            <a href="http://blog.inspheris.com/post/96609702135/lintranet-nouvelle-generation-pour-mon-entreprise" target="_new">Episode 1 : L'intranet nouvelle génération pour mon entreprise ?</a>
+                                                        </strong>
+                                                    </td>
+                                                </tr>
+                                                <tr height="35">
+                                                    <td ><img src="images/wifi.png" title="Wifi" alt="Wifi" /></td>
+                                                    <td style="padding-left: 15px;">
+                                                        <strong>
+                                                            <a href="http://blog.inspheris.com/post/96608321725/quels-usages-pour-lintranet-nouvelle-generation" >Episode 2 : Quels usages pour l'intranet nouvelle génération ? </a>
+                                                        </strong>
+                                                    </td>
+                                                </tr>
+                                                <tr height="35">
+                                                    <td ><img src="images/database.png" title="Database" alt="Database" /></td>
+                                                    <td style="padding-left: 15px;">
+                                                        <strong >
+                                                            <a href="http://blog.inspheris.com/post/96618407025/rh-dsi-marketing-et-les-intranets-nouvelle" >Episode 3 : RH, DSI, Marketing, et les intranets nouvelle génération</a>
+                                                        </strong>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" width="100%" height="10" style="border-bottom: 5px solid  #b3b3b3;">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" align="justify">
+                                            <p>Inspheris développe des intranets 2.0, des réseaux sociaux, des plateformes participatives et collaboratives pour les organisations de toutes tailles. Précurseur dans le monde des Réseaux Sociaux d'Entreprise et Intranet 2.0, Inspheris a déjà gagné la confiance de clients prestigieux et satisfaits, dont CANAL+, RENAULT, GMF, ClubMed, ARTE , ClubUnilever… <br />Plus d'informations sur <a target="_new" href="http://www.inspheris.com" class="colorred">inspheris.com</a></p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"> &nbsp;</td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="3" style="padding:0 25%;">
+                                            <table width="100%">
+                                                <tbody>
+                                                    <tr align="center">
+                                                        <td width="33%">
+                                                            <img title="Intelligent" alt="Intelligent" src="images/intelligent.png" />
+                                                        </td>
+                                                        <td width="33%">
+                                                            <img alt="Facile" title="Facile" src="images/facile.png" />
+                                                        </td>
+                                                        <td  width="33%">
+                                                            <img title="Efficace" alt="Efficace" src="images/efficace.png" />
+                                                        </td>
+                                                    </tr>
+                                                    <tr align="center">
+                                                        <td width="33%">
+                                                            <strong><span class="colorintelliegent">Intelligent
+                                                                </span></strong>
+                                                        </td>
+                                                        <td width="33%">
+                                                            <strong><span class="colorgray"> Facile
+                                                                </span></strong>
+
+                                                        </td>
+                                                        <td width="33%">
+                                                            <strong><span class="colorgreen"> Efficace
+                                                                </span></strong>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>                                        
+                                    </tr>
+
+                                    <tr >
+                                        <td align="center" valign="middle" width="100%" height="150" style="font-size:12px !important;">
+                                            <table cellpadding="0" cellspacing="0" border="0" align="center" width="100%" style="width: 100%;  text-align: center;" id="footer">
+                                                <tr>
+                                                    <td align="left" valign="top" width="10%" height="50" style=" text-align: left;border-right: #999 solid 1px;">
+                                                        <div style="border-right: #999 solid 1px;padding-right: 10px;">
+                                                            <a href="http://www.inspheris.com" target ="_blank" title="inspheris.com" style="text-decoration: none;">
+                                                                <img class="image_fix" align="right" src="images/footer-logo.png" alt="Inspheris" title="Inspheris"  />
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                    <td width="45%">
+                                                        <span class="address">Inspheris - 38, rue des Mathurins - 75008 Paris</span> </td>
+                                                    <td width="2%">&bull;</td>
+                                                    <td width="15%"> <a target="_new" href="http://www.inspheris.com" class="colorgray link" style="font-size: 14px;">inspheris.com</a></td>
+                                                    <td width="3%">&bull;</td>
+                                                    <td width="20%">
+                                                        <span class="mobile">+33 9 72 35 12 70   </span>
+                                                    </td>
+
+                                                </tr>                                                
+                                            </table>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td colspan="3" align="center"> 
+                                            <p style="font-size:12px;text-align: center">
+                                                Vous pouvez vous désinscrire automatiquement en cliquant sur ce  <unsubscribe> lien </unsubscribe>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="7%" valign="top"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" width="90%" height="40"></td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>  
+        <!-- End of wrapper table -->
+    </body>
+</html>

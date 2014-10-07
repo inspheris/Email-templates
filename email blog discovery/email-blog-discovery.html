@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Email blog Discovery</title>
         <style type="text/css">
-            /* Based on The MailChimp Reset INLINE: Yes. */  
+            /* Based on The MailChimp Reset INLINE: Yes. */
             /* Client-specific Styles */
             #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
             @font-face {
@@ -20,22 +20,22 @@
                 font-weight: normal;
                 font-style: normal;
             }
-            
+
             @font-face {
                 font-family: 'Open Sans Regular';
                 src:url('fonts/OpenSans-Regular.ttf') format('truetype');
                 font-weight: normal;
                 font-style: normal;
             }
-            
+
             body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; background-color: #FFF;font-size:16px;
                  font-family: "Open Sans Regular", sans-serif;
                  color:#666;
-            } 
-            /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
-            .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
+            }
+            /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+            .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
             .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
-            /* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+            /* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */
             #backgroundTable {margin:0; padding:0; width:100% !important;  background-color: #FFF;}
             /* End reset */
             h1{
@@ -49,8 +49,8 @@
             .sans-bold{ font-family: "Open Sans Regular"; }
             /* Some sensible defaults for images
             Bring inline: Yes. */
-            img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
-            a img {border:none;} 
+            img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+            a img {border:none;}
             .image_fix {display:block;}
 
             /* Yahoo paragraph fix
@@ -87,7 +87,7 @@
             .colorblue { color:#139AC7;
                          font-size: 18px; }
 
-            .colorblak { color:#000; 
+            .colorblak { color:#000;
                          font-size: 18px;}
 
             .colorintelliegent { color:#149bc8;font-size: 18px; }
@@ -101,10 +101,10 @@
             .inside{
                 width:85%;
                 height:auto;
-                margin:0 auto;                  
+                margin:0 auto;
                 padding: 2px 10px 0px 10px;
-/*                background:#7f7f7f;
-                background:rgba(255,255,255,0.5);*/
+                /*                background:#7f7f7f;
+                                background:rgba(255,255,255,0.5);*/
                 background-color: #ffffff;
                 opacity: 0.6;
                 filter: alpha(opacity=60); /* For IE8 and earlier */
@@ -116,19 +116,19 @@
                 color: black;
                 line-height: 20px;
             }
-            
+
             .arrow{
                 background: url(images/arrow.png) no-repeat;
                 height: 33px;
                 width: 29px;
             }
             .bg{
-                background:#F28A98;
-                height: 700px;
-                background-repeat: no-repeat;  
-                position: relative;        
+                background: url(images/background-800.png) #F28A98;
+                height: 531px;
+                background-repeat: no-repeat;
+                position: relative;
                 width: 100%;
-                margin-left: auto; 
+                margin-left: auto;
                 margin-right: auto;
                 border-top:11px solid #656564;
                 border-bottom:11px solid #656564;
@@ -137,7 +137,7 @@
             @media only screen and (min-device-width: 320px) {
                 .bg{
                     background: url(images/background-480.png) #F28A98;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     height: 259px;
                 }
                 .bg h2{
@@ -147,7 +147,7 @@
             @media only screen and (min-device-width: 480px) {
                 .bg{
                     background: url(images/background-480.png) #F28A98;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     height: 259px;
                 }
                 .bg h2{
@@ -157,17 +157,17 @@
             @media only screen and (min-device-width: 600px) {
                 .bg{
                     background: url(images/background-600.png) #F28A98;
-                    background-repeat: no-repeat; 
-                    height: 323px;
+                    background-repeat: no-repeat;
+                    height: 353px;
                 }
                 .bg h2{
-                    font-size: 22px;
+                    font-size: 20px;
                 }
             }
-             @media only screen and (min-device-width: 768px) {
+            @media only screen and (min-device-width: 768px) {
                 .bg{
                     background: url(images/background-800.png) #F28A98;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     height: 431px;
                 }
                 .bg h2{
@@ -175,11 +175,11 @@
                 }
 
             }
-            
+
             @media only screen and (min-device-width: 870px) {
                 .bg{
                     background: url(images/background-870.png) #F28A98;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     height: 469px;
                 }
                 .bg h2{
@@ -189,7 +189,7 @@
             @media only screen and (min-device-width: 900px) {
                 .bg{
                     background: url(images/background-900.png) #F28A98;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     height: 485px;
                 }
                 .bg h2{
@@ -197,9 +197,9 @@
                 }
             }
             @media only screen and (min-device-width: 1024px) {
-               .bg{
+                .bg{
                     background: url(images/background-1024.png) #F28A98;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     height: 550px;
                 }
                 .bg h2{
@@ -207,9 +207,9 @@
                 }
             }
             @media only screen and (min-device-width: 1280px) {
-               .bg{
+                .bg{
                     background: url(images/background-1024.png) #F28A98;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     height: 550px;
                 }
                 .bg h2{
@@ -217,9 +217,9 @@
                 }
             }
             @media only screen and (min-device-width: 1326px) {
-               .bg{
+                .bg{
                     background: url(images/background-1280.png) #F28A98;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     height: 690px;
                 }
                 .bg h2{
@@ -229,7 +229,7 @@
             @media only screen and (min-device-width: 1900px) {
                 .bg{
                     background: url(images/background-1900.png) #D8507D;
-                    background-repeat: no-repeat; 
+                    background-repeat: no-repeat;
                     height: 1024px;
                 }
                 .bg h2{
@@ -241,7 +241,7 @@
             MOBILE TARGETING
             ****************************************************
             ***************************************************/
-            
+
             /* More Specific Targeting */
 
             @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -262,7 +262,7 @@
             }
 
             @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-                /* Put your iPhone 4g styles in here */ 
+                /* Put your iPhone 4g styles in here */
             }
 
             /* Android targeting */
@@ -282,9 +282,9 @@
         <!-- Targeting Windows Mobile -->
         <!--[if IEMobile 7]>
         <style type="text/css">
-        
+
         </style>
-        <![endif]-->   
+        <![endif]-->
 
         <!-- ***********************************************
         ****************************************************
@@ -301,7 +301,7 @@
     <body>
         <table cellpadding="0" cellspacing="0" border="0" id="backgroundTable">
             <tr>
-                <td valign="top" align="center"> 
+                <td valign="top" align="center">
                     <!-- Tables are the most common way to format your email consistently. Set your table widths inside cells and in most cases reset cellpadding, cellspacing, and border to zero. Use nested tables as a way to space effectively in your message. -->
                     <table cellpadding="0" cellspacing="0" border="0" align="center" width="90%">
                         <tr>
@@ -310,7 +310,7 @@
                         <tr style="background-color: #F5F5F0;">
                             <td width="7%" valign="top"></td>
                             <td width="85%" valign="top">
-                                <table cellpadding="0" cellspacing="0" border="0" align="center">             
+                                <table cellpadding="0" cellspacing="0" border="0" align="center">
                                     <tr >
                                         <td colspan="3" >&nbsp;</td>
                                     </tr>
@@ -322,48 +322,48 @@
                                         </td>
                                         <td width="5%">&nbsp;&nbsp;&nbsp;</td>
                                     </tr>
-                                    
+
                                     <tr >
                                         <td colspan="3" width="100%" align="justify" valign="top" style="font-size: 25px; text-align: center; ">
                                             <div class="bg">
-                                            <h2 class="colorred">
-                                                Profitez des derniers rayons de soleil<br /> de l’été sur le blog Inspheris
-                                            </h2>
-                                            <div class="inside">
-                                                <p>
-                                                <strong class="colorblak">L’été touche à sa fin.</strong>
-                                                La rentrée est déjà bien commencée, et l’automne pointe déjà le bout de son nez. Venez profitez des dernières couleurs de l’été sur le <strong><a class="colorred" href="http://blog.inspheris.com/">blog Inspheris</a></strong> : un blog d’idées pour entreprise innovantes. Avis d’experts, retours d’expériences, événements… toute l’actualité de l’entreprise collaborative et de l’intranet nouvelle génération !
-                                                </p>                                                
-                                                <p>
-                                                    <strong>Pour mieux vous laisser tenter, voici quelques pétites en guise d’amuse-bouche:</strong>
-                                                </p> 
-                                                <table>
-                                                    <tr>
-                                                        <td valign="top"><div class="arrow">&nbsp;</div></td>
-                                                        <td valign="top"><p style="margin-top:0px">Canal + a choisi Inspheris pour son intranet social : <strong>découvrez ici pourquoi (intégrer lien)</strong></p></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><div class="arrow">&nbsp;</div></td>
-                                                        <td valign="top"><p style="margin-top:0px">Tous les métiers sont bénéficiaires dans un projet intranet social : <strong>quelques exemples avec les RH, DSI, Marketing</strong></p></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><div class="arrow">&nbsp;</div></td>
-                                                        <td valign="top"><p style="margin-top:0px">Renault booste l’innovation avec Inspheris : <strong>savez-vous comment ?</strong></p></td>
-                                                    </tr>
-                                                </table>
-                                            </div>
+                                                <h2 class="colorred">
+                                                    Profitez des derniers rayons de soleil<br /> de l’été sur le blog Inspheris
+                                                </h2>
+                                                <div class="inside">
+                                                    <p>
+                                                        <strong class="colorblak">L’été touche à sa fin.</strong>
+                                                        La rentrée est déjà bien commencée, et l’automne pointe déjà le bout de son nez. Venez profitez des dernières couleurs de l’été sur le <strong><a class="colorred" href="http://blog.inspheris.com/">blog Inspheris</a></strong> : un blog d’idées pour entreprise innovantes. Avis d’experts, retours d’expériences, événements… toute l’actualité de l’entreprise collaborative et de l’intranet nouvelle génération !
+                                                    </p>
+                                                    <p>
+                                                        <strong>Pour mieux vous laisser tenter, voici quelques pétites en guise d’amuse-bouche:</strong>
+                                                    </p>
+                                                    <table>
+                                                        <tr>
+                                                            <td valign="top"><div class="arrow">&nbsp;</div></td>
+                                                            <td valign="top"><p style="margin-top:0px">Canal + a choisi Inspheris pour son intranet social : <strong>découvrez ici pourquoi (intégrer lien)</strong></p></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><div class="arrow">&nbsp;</div></td>
+                                                            <td valign="top"><p style="margin-top:0px">Tous les métiers sont bénéficiaires dans un projet intranet social : <strong>quelques exemples avec les RH, DSI, Marketing</strong></p></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><div class="arrow">&nbsp;</div></td>
+                                                            <td valign="top"><p style="margin-top:0px">Renault booste l’innovation avec Inspheris : <strong>savez-vous comment ?</strong></p></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </td>
-                                        
+
                                     </tr>
-                                    
-                                    
+
+
                                     <tr>
                                         <td colspan="3" align="justify">
                                             <div style="width: 94%;margin:0 auto;">
-                                            <p>Inspheris développe des intranets 2.0, des réseaux sociaux, des plateformes participatives et collaboratives pour les organisations de toutes tailles. Précurseur dans le monde des Réseaux Sociaux d'Entreprise et Intranet 2.0, Inspheris a déjà gagné la confiance de clients prestigieux et satisfaits, dont CANAL+, RENAULT, GMF, ClubMed, ARTE , ClubUnilever… <br />Plus d'informations sur <a target="_new" href="http://www.inspheris.com" class="colorred">inspheris.com</a></p>
-                                            
-                                            
+                                                <p>Inspheris développe des intranets 2.0, des réseaux sociaux, des plateformes participatives et collaboratives pour les organisations de toutes tailles. Précurseur dans le monde des Réseaux Sociaux d'Entreprise et Intranet 2.0, Inspheris a déjà gagné la confiance de clients prestigieux et satisfaits, dont CANAL+, RENAULT, GMF, ClubMed, ARTE , ClubUnilever… <br />Plus d'informations sur <a target="_new" href="http://www.inspheris.com" class="colorred">inspheris.com</a></p>
+
+
                                             </div>
                                         </td>
                                     </tr>
@@ -402,7 +402,7 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                        </td>                                        
+                                        </td>
                                     </tr>
 
                                     <tr >
@@ -425,13 +425,13 @@
                                                         <span class="mobile">+33 9 72 35 12 70   </span>
                                                     </td>
 
-                                                </tr>                                                
+                                                </tr>
                                             </table>
                                         </td>
                                     </tr>
 
                                     <tr>
-                                        <td colspan="3" align="center"> 
+                                        <td colspan="3" align="center">
                                             <p style="font-size:12px;text-align: center">
                                                 Vous pouvez vous désinscrire automatiquement en cliquant sur ce  <unsubscribe> lien </unsubscribe>
                                             </p>
@@ -448,7 +448,7 @@
 
                 </td>
             </tr>
-        </table>  
+        </table>
         <!-- End of wrapper table -->
     </body>
 </html>

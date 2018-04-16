@@ -1,645 +1,1200 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title></title>
+    <title></title>
 
-  <style type="text/css">
+    <style type="text/css">
         * {
-            -webkit-box-sizing:border-box;
-            -moz-box-sizing:border-box;
-            -o-box-sizing:border-box;
-            box-sizing:border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
         }
-        body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-        table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-        img { -ms-interpolation-mode: bicubic; max-width: 100%; }
-
+        
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        
+        img {
+            -ms-interpolation-mode: bicubic;
+            max-width: 100%;
+        }
         /* RESET STYLES */
-        img { border: 0; outline: none; text-decoration: none; }
-        table { border-collapse: collapse !important; }
+        
+        img {
+            border: 0;
+            outline: none;
+            text-decoration: none;
+        }
+        
+        table {
+            border-collapse: collapse !important;
+        }
         /*body { margin: 0 !important; padding: 0 !important; width: 100% !important; }*/
-
         /* iOS BLUE LINKS */
+        
         a[x-apple-data-detectors] {
-          color: inherit !important;
-          text-decoration: none !important;
-          font-size: inherit !important;
-          font-family: inherit !important;
-          font-weight: inherit !important;
-          line-height: inherit !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
         }
         /* ANDROID CENTER FIX */
-        div[style*="margin: 16px 0;"] { margin: 0 !important; }
-
-        /* MEDIA QUERIES */
-        @media all and (max-width:599px){ 
-        .wrapper{ width:94%!important; padding: 0 !important; }
-        .mobile-p {
-          padding: 20px !important;
-        }
-        .container{ width:100%!important;  padding: 0 !important;}
-        .mobile{ width:100%!important; display:block!important; /*padding: 0 !important;*/ }
-        .img{ width:100% !important; height:auto !important; }
-        *[class="mobileOff"] { width: 0px !important; display: none !important; }
-        *[class*="mobileOn"] { display: block !important; max-height:none !important; }
         
-      }
-  </style>    
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+        /* MEDIA QUERIES */
+        
+        @media all and (max-width:599px) {
+            .wrapper {
+                width: 94%!important;
+                padding: 0 !important;
+            }
+            .mobile-p {
+                padding: 20px !important;
+            }
+            .container {
+                width: 100%!important;
+                padding: 0 !important;
+            }
+            .mobile {
+                width: 100%!important;
+                display: block!important;
+                /*padding: 0 !important;*/
+            }
+            .img {
+                width: 100% !important;
+                height: auto !important;
+            }
+            *[class="mobileOff"] {
+                width: 0px !important;
+                display: none !important;
+            }
+            *[class*="mobileOn"] {
+                display: block !important;
+                max-height: none !important;
+            }
+        }
+
+         .video-wrapper {display:none;}
+         @media (-webkit-min-device-pixel-ratio: 0) and (min-device-width:1024px) 
+         {
+          .video-wrapper { display:block!important; }
+          .video-fallback { display:none!important; }
+         }
+          @supports (-webkit-overflow-scrolling:touch) and (color:#ffffffff) {
+            div[class^=video-wrapper] { display:block!important; }
+            div[class^=video-fallback] { display:none!important; }
+          }
+          #MessageViewBody .video-wrapper { display:block!important; }
+          #MessageViewBody .video-fallback { display:none!important; }  
+
+    </style>
 </head>
-<body  style="margin:0; padding:0; background:#f3f3f3;" bgcolor="#f3f3f3">
-  <center>
-     <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color:#619EC1;border-collapse:collapse;border-spacing:0;color:#fff;padding:0;text-align:inherit;vertical-align:top;">
-        <tr>
-            <td style="background:#619EC1; padding: 4px 0;" width="100%" bgcolor="#005396">
-            </td>
-        </tr>
-    </table>
-    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td align="center" valign="top" style="padding:0;">
-                <table width="580" cellpadding="0" cellspacing="0" border="0" class="wrapper">
-                  <tr>
-                       <td style="color: #4d4d4d; font-family:arial; padding:17px 0 9px; font-size:11px; line-height:18px;" width="300" align="left">
-                         July 14, 2016
-                       </td>                    
-                   </tr>
-                  </table>               
-            </td>
-        </tr>
-    </table>
-    <table width="580" cellpadding="0" cellspacing="0" border="0" class="wrapper" style="border-radius:4px;background: #FFFFFF;">
-      <tr>
-        <td class="mobile-p" style="padding:35px 40px;box-shadow: 0 0 10px 0 rgba(0,0,0,.05);background:#fff; border-radius: 4px; padding:20px; color:#4d4d4d;font-family:'Helvetica','Arial',sans-serif;">
-          <table width="100%" cellpadding="0" cellspacing="0">
-            <tr>
-              <td style="text-transform:uppercase;color:#619EC1;font-family:'Helvetica','Arial',sans-serif;font-size:22px;font-weight:300;line-height:28px;margin:10px 0;padding:0;vertical-align:top;word-break:break-word;">
-                <a href="#" style="text-decoration:none;color: #619EC1;" target="_blank">Organiser une sortie avec toute l'entreprise</a>
-              </td>
-            </tr>
-            
-           
-            <tr>
-              <td width="100%" height="40"></td>
-            </tr>
-            <tr>
-              <td >
-                <img src="https://cdn-images-1.medium.com/max/1400/1*278tqw9zNPe2WCAz29Wzdw.jpeg" alt="img" width="100" height="100" style="border-radius: 3px;width: 100%;max-width: 580px;">
-               
-              </td>
-            </tr>
-            <tr>
-              <td width="100%" height="30"></td>
-            </tr>
 
+<body style="margin:0; padding:0; background:#f3f3f3;" bgcolor="#f3f3f3">
+    <center>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color:#619EC1;border-collapse:   collapse;border-spacing:0;color:#fff;padding:0;text-align:inherit;vertical-align:top;">
             <tr>
-                <td>
-                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <td style="background:#619EC1; padding: 4px 0;" width="100%" bgcolor="#005396">
+                </td>
+            </tr>
+        </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" valign="top" style="padding:0;">
+                    <table width="580" cellpadding="0" cellspacing="0" border="0" class="wrapper">
                         <tr>
-                          <td class="mobile" width="15%" style="padding: 0 0 0 0;vertical-align: top;">
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                            </table>
-                          </td>
+                            <td style="color: #4d4d4d; font-family:arial; padding:17px 0 9px; font-size:11px; line-height:18px;" width="300" align="left">
+                                July 14, 2016
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table width="580" cellpadding="0" cellspacing="0" border="0" class="wrapper" style="border-radius:4px;background: #FFFFFF;">
+            <tr>
+                <td class="mobile-p" style="padding:35px 40px;box-shadow: 0 0 10px 0 rgba(0,0,0,.05);background:#fff; border-radius: 4px; padding:20px; color:#4d4d4d;font-family:'Helvetica','Arial',sans-serif;">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="text-transform:uppercase;color:#619EC1;font-family:'Helvetica','Arial',sans-serif;font-size:22px;font-weight:300;line-height:28px;margin:10px 0;padding:0;vertical-align:top;word-break:break-word;">
+                                <a href="#" style="text-decoration:none;color: #619EC1;" target="_blank">Organiser une sortie avec toute l'entreprise</a>
+                            </td>
+                        </tr>
 
-                          <td class="mobile" width="70%" style="padding: 0 0 0 0;vertical-align: top;">
+                        <tr>
+                            <td width="100%" height="40"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <img src="https://cdn-images-1.medium.com/max/1400/1*278tqw9zNPe2WCAz29Wzdw.jpeg" alt="img" width="580" height="100" style="border-radius: 3px;width: 100%;max-width: 580px;">
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="100%" height="30"></td>
+                        </tr>
+
+                        <tr>
+                          <td>
                             <table width="100%" cellpadding="0" cellspacing="0" border="0">
                               <tr>
-                                  <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
-                                     <table width="100%" cellpadding="0" cellspacing="0">
+                                <td class="mobile" width="15%" style="padding: 0 0 0 0;vertical-align: top;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                  </table>
+                                </td>
+
+                                 <td class="mobile" width="70%" style="padding: 0 0 0 0;vertical-align: top;">
+                                   <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                       <tr>
-                                        <td >
-                                          <img src="https://cdn-images-1.medium.com/max/1400/1*278tqw9zNPe2WCAz29Wzdw.jpeg" alt="img" width="100" height="100" style="border-radius: 3px;width: 100%;max-width: 376px;height: 289px">
-                                        </td>
-                                      </tr>
-                                       
-                                       <tr>
-                                         <td style="background: white;padding: 10px;">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                               <tr>
-                                                  <td style="font-size:14px;font-weight:600; text-transform: uppercase; line-height: 1.4em; margin: 10px 0;color:#3685b3;font-family:'Helvetica','Arial',sans-serif;">
-                                                    <a href="#" style="text-decoration:none;color:#888c8f;" target="_blank">Article Title</a>
-                                                  </td>
+                                        <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/09b31845-5f22-4104-837c-ec3b31cf428b.jpg" alt="img" width="410" height="289" style="border-radius: 3px;width: 100%;max-width: 410px;height: 289px">
+                                                    </td>
                                                 </tr>
 
                                                 <tr>
-                                                 <td style="padding: 10px 0">
-                                                   <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                    <td style="background: white;padding: 10px;">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                                             <tr>
-                                                              <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td align="center" style="width:60px; height: 60px; background-color: #eee; padding: 10px;border-radius: 4px;">
-                                                                      <span style="background: #fff;border-radius: 50%;width: 40px;line-height: 35px;height: 40px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="img/img.png" /></span>
-                                                                    </td>  
-                                                                  </tr>
-                                                                  
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="65%"  style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td>
-                                                                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                        <tr>
-                                                                            <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 17px;">
-                                                                              <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a>
-                                                                              has commented an articles in
-                                                                               <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
-                                                                            </td>
-                                                                          
-                                                                        </tr> 
-                                                                      </table>                                  
-                                                                    </td>
-                                                                  </tr>
-                                                                </table>
-                                                              </td>
-
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="20%" style="vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                     22 Mar 2018,
-                                                                    </td>
-                                                                    </tr>
-
-                                                                    <tr>
-                                                                       <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                    16:45
-                                                                  </td>
-                                                                    </tr>
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
+                                                                <td style="font-size:14px;font-weight:600; text-transform: uppercase; line-height: 1.4em; margin: 10px 0;color:#3685b3;font-family:'Helvetica','Arial',sans-serif;">
+                                                                    <a href="#" style="text-decoration:none;color:#888c8f;" target="_blank">Article Title</a>
+                                                                </td>
                                                             </tr>
-                                                          </table>
-                                                       </td>
-                                                     </tr>
+
+                                                            <tr>
+                                                                <td style="padding: 10px 0">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="center" style="width:60px; height: 60px; background-color: #eee; border-radius: 4px;">
+                                                                                            <span style="background: #fff;border-radius: 4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/577a944d-0ebb-4aaf-a8d2-803c7fc92912.jpg" width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="65%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-right:1px solid #EFEFEF;">
+                                                                                                <tr>
+                                                                                                    <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 19px;">
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a> has commented an articles in
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                                                    </td>
+
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="20%" style="vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal; color: #888c8f;">
+                                                                                            22 Mar 2018,
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            16:45
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
                                             </table>
-                                         </td>
-                                       </tr>
-                                     </table>
-                                  </td>
-                                </tr>
-
-
-                                  <tr>
-                                    <td width="100%" height="30"></td>
-                                  </tr>
-
-
-                                <tr>
-                                  <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
-                                     <table width="100%" cellpadding="0" cellspacing="0">
-                                      <tr>
-                                        <td >
-                                          <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/981bf074-8bc2-49f3-9150-9039fc37911b.png" alt="img" width="100" height="100" style="border-radius: 3px;width: 100%;max-width: 376px; height: 290px">
                                         </td>
+                                      </tr> 
+
+                                      <tr>
+                                        <td width="100%" height="30"></td>
                                       </tr>
-                                       
-                                       <tr>
-                                         <td style="background: white;padding: 10px;">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                               <tr>
-                                                  <td style="font-size:14px;font-weight:600; text-transform: uppercase; line-height: 1.4em; margin: 10px 0;color:#3685b3;font-family:'Helvetica','Arial',sans-serif;">
-                                                    <a href="#" style="text-decoration:none;color:#888c8f;" target="_blank">Article Title</a>
-                                                  </td>
+
+                                      <!--event-->
+                                      <tr>
+                                        <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px; position: relative;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                      <a href="">
+                                                        <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/981bf074-8bc2-49f3-9150-9039fc37911b.png" alt="img" width="410" height="289" style="border-radius: 3px;width: 100%;max-width: 410px; height: 290px">
+                                                      </a>
+                                                    </td>
+                                                </tr>
+
+                                                
+                                                <tr>
+                                                    <td style="background: white;padding: 10px;">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td style="font-size:14px;font-weight:600; text-transform: uppercase; line-height: 1.4em; margin: 10px 0;color:#3685b3;font-family:'Helvetica','Arial',sans-serif;">
+                                                                    <a href="#" style="text-decoration:none;color:#888c8f;" target="_blank">Event 3</a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td style="padding: 10px 0">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="center" style="width:60px; height: 60px; background-color: #eee; border-radius: 4px;">
+                                                                                            <span style="background: #fff;border-radius: 4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/577a944d-0ebb-4aaf-a8d2-803c7fc92912.jpg" width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="65%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-right: 1px solid #EFEFEF;">
+                                                                                                <tr>
+                                                                                                    <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 19px;">
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a> shared an event in
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                                                    </td>
+
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="20%" style="vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            22 Mar 2018,
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            16:45
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                     </tr>
+
+                                     <tr>
+                                      <td width="100%" height="30"></td>
+                                    </tr>
+
+                                      <!--document with 1 file-->
+                                      <tr>
+                                        <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/d2dfa22f-ab0f-430d-82a4-ccdfc53f1a48.png" alt="img" width="410" height="289" style="border-radius: 3px;width: 100%;max-width: 410px;height: 289px">
+                                                    </td>
                                                 </tr>
 
                                                 <tr>
-                                                 <td style="padding: 10px 0">
-                                                   <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                    <td style="padding: 10px 5px">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                                             <tr>
-                                                              <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td align="center" style="width:60px; height: 60px; background-color: #eee; padding: 10px;border-radius: 4px;">
-                                                                      <span style="background: #fff;border-radius: 50%;width: 40px;line-height: 35px;height: 40px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="img/img.png" /></span>
-                                                                    </td>  
-                                                                  </tr>
-                                                                  
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="65%"  style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td>
-                                                                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                
+                                                                <td class="mobile" width="33.3333%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                                                         <tr>
-                                                                            <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 17px;">
-                                                                              <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a>
-                                                                              shared an event in
-                                                                               <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                            <td align="center" style="width:60px; height: 60px; border-radius: 4px;">
+                                                                              <a href="">
+                                                                                <span style="background: #fff;border-radius:4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/98f1951d-ed93-4272-b486-4b80db0c81e1.png"   width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                 <a href="" style="font-size: 10px; text-decoration: none;color: #888c8f;width: 125px;word-break: break-all;">search_this_document(1).docx</a>
+                                                                              </a>
                                                                             </td>
-                                                                          
-                                                                        </tr> 
-                                                                      </table>                                  
-                                                                    </td>
-                                                                  </tr>
-                                                                </table>
-                                                              </td>
+                                                                        </tr>
 
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="20%" style="vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                     22 Mar 2018,
-                                                                    </td>
-                                                                    </tr>
-
-                                                                    <tr>
-                                                                       <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                    16:45
-                                                                  </td>
-                                                                    </tr>
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
+                                                                    </table>
+                                                                </td>
+                                                                <td width="5px"></td>
                                                             </tr>
-                                                          </table>
-                                                       </td>
-                                                     </tr>
-                                            </table>
-                                         </td>
-                                       </tr>
-                                     </table>
-                                  </td>
-                                </tr>
-
-
-                                  <tr>
-                                    <td width="100%" height="30"></td>
-                                  </tr>
-                              
-
-                              <tr>
-                                  <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
-                                     <table width="100%" cellpadding="0" cellspacing="0">
-                                      <tr>
-                                        <td >
-                                          <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/d2dfa22f-ab0f-430d-82a4-ccdfc53f1a48.png" alt="img" width="100" height="100" style="border-radius: 3px;width: 100%;max-width: 376px;height: 289px">
-                                        </td>
-                                      </tr>
-                                       
-                                       <tr>
-                                         <td style="background: white;padding: 10px;">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                               <tr>
-                                                  <td style="font-size:14px;font-weight:600; text-transform: uppercase; line-height: 1.4em; margin: 10px 0;color:#3685b3;font-family:'Helvetica','Arial',sans-serif;">
-                                                    <a href="#" style="text-decoration:none;color:#888c8f;" target="_blank">Article Title</a>
-                                                  </td>
+                                                        </table>
+                                                    </td>
                                                 </tr>
 
                                                 <tr>
-                                                 <td style="padding: 10px 0">
-                                                   <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                    <td style="background: white;padding: 10px;">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                                             <tr>
-                                                              <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td align="center" style="width:60px; height: 60px; background-color: #eee; padding: 10px;border-radius: 4px;">
-                                                                      <span style="background: #fff;border-radius: 50%;width: 40px;line-height: 35px;height: 40px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="img/img.png" /></span>
-                                                                    </td>  
-                                                                  </tr>
-                                                                  
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="65%"  style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td>
-                                                                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                        <tr>
-                                                                            <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 17px;">
-                                                                              <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a>
-                                                                              shared document in
-                                                                               <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
-                                                                            </td>
-                                                                          
-                                                                        </tr> 
-                                                                      </table>                                  
-                                                                    </td>
-                                                                  </tr>
-                                                                </table>
-                                                              </td>
-
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="20%" style="vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                     22 Mar 2018,
-                                                                    </td>
-                                                                    </tr>
-
-                                                                    <tr>
-                                                                       <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                    16:45
-                                                                  </td>
-                                                                    </tr>
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
+                                                                <td style="font-size:14px;font-weight:600; text-transform: uppercase; line-height: 1.4em; margin: 10px 0;color:#3685b3;font-family:'Helvetica','Arial',sans-serif;">
+                                                                    <a href="#" style="text-decoration:none;color:#888c8f;" target="_blank">Article Title</a>
+                                                                </td>
                                                             </tr>
-                                                          </table>
-                                                       </td>
-                                                     </tr>
+
+                                                            <tr>
+                                                                <td style="padding: 10px 0">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="center" style="width:60px; height: 60px; background-color: #eee; border-radius: 4px;">
+                                                                                            <span style="background: #fff;border-radius: 4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/577a944d-0ebb-4aaf-a8d2-803c7fc92912.jpg" width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="65%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-right: 1px solid #EFEFEF;">
+                                                                                                <tr>
+                                                                                                    <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 19px;">
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a> shared document in
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                                                    </td>
+
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="20%" style="vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            22 Mar 2018,
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            16:45
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
                                             </table>
-                                         </td>
-                                       </tr>
-                                     </table>
-                                  </td>
-                                </tr>
-
-
-                                  <tr>
-                                    <td width="100%" height="30"></td>
-                                  </tr>
-                               
-
-                               <tr>
-                                  <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
-                                     <table width="100%" cellpadding="0" cellspacing="0">
-                                      <tr>
-                                        <td >
-                                          <img src="https://cdn-images-1.medium.com/max/1400/1*278tqw9zNPe2WCAz29Wzdw.jpeg" alt="img" width="100" height="100" style="border-radius: 3px;width: 100%;max-width: 376px; height: 290px;">
                                         </td>
                                       </tr>
-                                       
-                                       <tr>
-                                         <td style="background: white;padding: 10px;">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                              
 
+
+                                      <tr>
+                                        <td width="100%" height="30"></td>
+                                      </tr>
+
+                                      <!--image gallery-->
+                                      <tr>
+                                        <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
                                                 <tr>
-                                                 <td style="padding: 10px 0">
-                                                   <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                            <tr>
-                                                              <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td align="center" style="width:60px; height: 60px; background-color: #eee; padding: 10px;border-radius: 4px;">
-                                                                      <span style="background: #fff;border-radius: 50%;width: 40px;line-height: 35px;height: 40px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="img/img.png" /></span>
-                                                                    </td>  
-                                                                  </tr>
-                                                                  
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="65%"  style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td>
-                                                                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                        <tr>
-                                                                            <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 17px;">
-                                                                              <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a>
-                                                                              has published quickpost in
-                                                                               <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
-                                                                            </td>
-                                                                          
-                                                                        </tr> 
-                                                                      </table>                                  
-                                                                    </td>
-                                                                  </tr>
-                                                                </table>
-                                                              </td>
-
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="20%" style="vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                     22 Mar 2018,
-                                                                    </td>
-                                                                    </tr>
-
-                                                                    <tr>
-                                                                       <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                    16:45
-                                                                  </td>
-                                                                    </tr>
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
-                                                            </tr>
-                                                          </table>
-                                                       </td>
-                                                     </tr>
-                                            </table>
-                                         </td>
-                                       </tr>
-                                     </table>
-                                  </td>
-                                </tr>
-
-
-                                  <tr>
-                                    <td width="100%" height="30"></td>
-                                  </tr>
-
-
-                                  <tr>
-                                  <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
-                                     <table width="100%" cellpadding="0" cellspacing="0">
-                                      <tr>
-                                        <td >
-                                          <img src="https://cdn-images-1.medium.com/max/1400/1*278tqw9zNPe2WCAz29Wzdw.jpeg" alt="img" width="100" height="100" style="border-radius: 3px;width: 100%;max-width: 376px; height: 290px;">
-                                        </td>
-                                      </tr>
-                                       
-                                       <tr>
-                                         <td style="background: white;padding: 10px;">
-                                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                               <tr>
-                                                  <td style="font-size:14px;font-weight:600; text-transform: uppercase; line-height: 1.4em; margin: 10px 0;color:#3685b3;font-family:'Helvetica','Arial',sans-serif;">
-                                                    <a href="#" style="text-decoration:none;color:#888c8f;" target="_blank">Article Title</a>
-                                                  </td>
+                                                    <td>
+                                                        <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/dde4254b-aaa5-4c13-b2c4-2b9e987adbaf.png" alt="img" width="410" height="289" style="border-radius: 3px;width: 100%;max-width: 410px; height: 290px;">
+                                                    </td>
                                                 </tr>
 
                                                 <tr>
-                                                 <td style="padding: 10px 0">
-                                                   <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                    <td>
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                                             <tr>
-                                                              <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td align="center" style="width:60px; height: 60px; background-color: #eee; padding: 10px;border-radius: 4px;">
-                                                                      <span style="background: #fff;border-radius: 50%;width: 40px;line-height: 35px;height: 40px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="img/img.png" /></span>
-                                                                    </td>  
-                                                                  </tr>
-                                                                  
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="65%"  style="padding: 0 7px 0 0;vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td>
-                                                                      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                <td class="mobile" width="33.3333%" style="padding: 0 0 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
                                                                         <tr>
-                                                                            <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 17px;">
-                                                                              <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a>
-                                                                              has commented an articles in
-                                                                               <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                            <td align="center" style="width:136px; height: 136px; border-radius: 4px;text-align: left;">
+                                                                                <a href="">
+                                                                                  <span style="background: #fff;border-radius: 4px;width: 136px;line-height: 35px;height: 136px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/787b6c31-045f-4ba6-a4f4-25db39fd60fd.jpg" width="136" height="136"/></span>
+                                                                                </a>
                                                                             </td>
-                                                                          
-                                                                        </tr> 
-                                                                      </table>                                  
-                                                                    </td>
-                                                                  </tr>
-                                                                </table>
-                                                              </td>
+                                                                        </tr>
 
-                                                              <td width="5px"></td>
-                                                              <td class="mobile" width="20%" style="vertical-align: top;">
-                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                                                                  <tr>
-                                                                    <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                     22 Mar 2018,
-                                                                    </td>
-                                                                    </tr>
+                                                                    </table>
+                                                                </td>
 
-                                                                    <tr>
-                                                                       <td style="font-size: 10px;line-height: 14px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;">
-                                                                    16:45
-                                                                  </td>
-                                                                    </tr>
-                                                                </table>
-                                                              </td>
-                                                              <td width="5px"></td>
+                                                                <td class="mobile" width="33.3333%" style="padding: 0 0 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="center" style="width:136px; height: 136px; border-radius: 4px;text-align: left;">
+                                                                              <a href="">
+                                                                                <span style="background: #fff;border-radius: 4px;width: 136px;line-height: 35px;height: 136px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/dde4254b-aaa5-4c13-b2c4-2b9e987adbaf.png"   width="136" height="136"/></span>
+                                                                              </a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+
+                                                                <td class="mobile" width="33.3333%" style="padding: 0 0 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="center" style="width:136px; height: 136px; border-radius: 4px;text-align: left;">
+                                                                              <a href="">
+                                                                                <span style="background: #fff;border-radius: 4px;width: 136px;line-height: 35px;height: 136px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/ffdb0003-4706-4d22-b24b-41e09fa92a1c.png" width="136" height="136"/></span>
+                                                                              </a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+
+                                                                <td width="5px"></td>
+
                                                             </tr>
-                                                          </table>
-                                                       </td>
-                                                     </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="background: white;padding: 10px;">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                                                            <tr>
+                                                                <td style="padding: 10px 0">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="center" style="width:60px; height: 60px; background-color: #eee;border-radius: 4px;">
+                                                                                            <span style="background: #fff;border-radius: 4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/577a944d-0ebb-4aaf-a8d2-803c7fc92912.jpg" width="60" height="60" style="border-radius: 4px;"  /></span>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="65%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-right: 1px solid #EFEFEF;">
+                                                                                                <tr>
+                                                                                                    <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 19px;">
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a> has commented on image gallery
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                                                    </td>
+
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="20%" style="vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            22 Mar 2018,
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            16:45
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
                                             </table>
-                                         </td>
-                                       </tr>
-                                     </table>
-                                  </td>
-                                </tr>
+                                        </td>
+                                      </tr>
 
 
-                                  <tr>
-                                    <td width="100%" height="30"></td>
-                                  </tr>
+                                       <tr>
+                                        <td width="100%" height="30"></td>
+                                      </tr>
+
+                                      <!--image gallery with single image-->
+                                      <tr>
+                                        <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/dde4254b-aaa5-4c13-b2c4-2b9e987adbaf.png" alt="img" width="410" height="289" style="border-radius: 3px;width: 100%;max-width: 410px; height: 290px;">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td class="mobile" width="33.3333%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="center" style="width:125px; height: 125px; border-radius: 4px;text-align: left;">
+                                                                              <a href="">
+                                                                                <span style="background: #fff;border-radius: 4px;width: 125px;line-height: 35px;height: 125px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/787b6c31-045f-4ba6-a4f4-25db39fd60fd.jpg" width="125" height="125" /></span>
+                                                                              </a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="background: white;padding: 10px;">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+
+                                                            <tr>
+                                                                <td style="padding: 10px 0">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="center" style="width:60px; height: 60px; background-color: #eee;border-radius: 4px;">
+                                                                                            <span style="background: #fff;border-radius: 4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/577a944d-0ebb-4aaf-a8d2-803c7fc92912.jpg" width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="65%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-right: 1px solid #EFEFEF;">
+                                                                                                <tr>
+                                                                                                    <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 19px;">
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a> has commented on image gallery in
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                                                    </td>
+
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="20%" style="vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            22 Mar 2018,
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            16:45
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                     </tr>
+
+                                     <tr>
+                                        <td width="100%" height="30"></td>
+                                      </tr>
+
+                                      <!--document gallery with more document-->
+                                      <tr>
+                                        <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/d2dfa22f-ab0f-430d-82a4-ccdfc53f1a48.png" alt="img" width="410" height="289" style="border-radius: 3px;width: 100%;max-width: 410px; height: 290px;">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="padding: 10px 5px">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td class="mobile" width="33.3333%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="center" style="width:60px; height: 60px; border-radius: 4px;">
+                                                                              <a href="">
+                                                                                <span style="background: #fff;border-radius:4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/c3cd1044-ffa9-49f7-ba29-b9c345731903.png"   width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                <a href="" style="font-size: 10px; text-decoration: none;color: #888c8f;width: 125px;word-break: break-all;">Outils_informatiques(1).pdf</a>
+                                                                              </a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+
+                                                                <td class="mobile" width="33.3333%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="center" style="width:60px; height: 60px; border-radius: 4px;">
+                                                                              <a href="">
+                                                                                <span style="background: #fff;border-radius:4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/98f1951d-ed93-4272-b486-4b80db0c81e1.png"   width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                 <a href="" style="font-size: 10px; text-decoration: none;color: #888c8f;width: 125px;word-break: break-all;">Outils_informatiques(1).pdf</a>
+                                                                              </a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+
+                                                                <td class="mobile" width="33.3333%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="center" style="width:60px; height: 60px; border-radius: 4px;">
+                                                                              <a href="">
+                                                                                <span style="background: #fff;border-radius:4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/ddb6c96a-88bb-4c8b-bbea-c29a1a071f9c.png"   width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                 <a href="" style="font-size: 10px; text-decoration: none;color: #888c8f;width: 125px;word-break: break-all;">Outils_informatiques(1).pdf</a>
+                                                                              </a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+                                                                <td width="5px"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="background: white;padding: 10px;">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td style="font-size:14px;font-weight:600; text-transform: uppercase; line-height: 1.4em; margin: 10px 0;color:#3685b3;font-family:'Helvetica','Arial',sans-serif;">
+                                                                    <a href="#" style="text-decoration:none;color:#888c8f;" target="_blank">Article Title</a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td style="padding: 10px 0">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="center" style="width:60px; height: 60px; background-color: #eee;border-radius: 4px;">
+                                                                                            <span style="background: #fff;border-radius:4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/577a944d-0ebb-4aaf-a8d2-803c7fc92912.jpg" width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="65%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-right: 1px solid #EFEFEF;">
+                                                                                                <tr>
+                                                                                                    <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 19px;">
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a> has published document
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                                                    </td>
+
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="20%" style="vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            22 Mar 2018,
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            16:45
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                     </tr>
+
+                                     <tr>
+                                        <td width="100%" height="30"></td>
+                                      </tr>
+
+                                      <!--video gallery-->
+                                      <tr>
+                                        <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/71838b9b-3ae9-4a40-ad2f-1d3c167e3246.jpg" alt="img" width="410" height="289" style="border-radius: 3px;width: 100%;max-width: 410px; height: 290px;">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td class="mobile" width="33.33%" style="padding: 0 0 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="center" style="width:137px; height: 137px; border-radius: 4px;">
+                                                                                <span style="background: #fff;border-radius:4px;width: 137px;line-height: 35px;height: 137px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;">
+                                                                                  <!-- video section -->
+                                                                                  <div class="video-wrapper" style="display:none;">
+                                                                                  <video width="137" height="137" controls="controls"  poster="https://www.emailonacid.com/images/blog_images/Emailology/2013/html5_video/bunny_cover.jpg" src="http://www.w3schools.com/html/mov_bbb.mp4" >
+                                                                                        <!-- fallback 1 -->
+                                                                                        <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" ><img height="137" 
+                                                                                          src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/a6da4438-af6b-47cd-828b-778d08ee2d5b.png" width="137" /></a>
+                                                                                  </video>
+                                                                                  </div>
+
+                                                                                  <!-- fallback section -->
+                                                                                  <div class="video-fallback">
+                                                                                    <a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ" ><img height="137" 
+                                                                                      src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/a6da4438-af6b-47cd-828b-778d08ee2d5b.png" width="137" /></a>
+                                                                                  </div>
+
+                                                                                </span>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+
+                                                                <td class="mobile" width="33.33%" style="padding: 0 0 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="center" style="width:137px; height: 137px; border-radius: 4px;">
+                                                                                <span style="background: #fff;border-radius:4px;width: 137px;line-height: 35px;height: 137px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;">
+                                                                                  <!-- video section -->
+                                                                                  <div class="video-wrapper" style="display:none;">
+                                                                                  <video width="137" height="137" controls="controls"  poster="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/76a65b5e-c5ac-4c76-a4b3-5299f657dd33.png" src="https://www.youtube.com/watch?v=DGeTa4v-LdA" >
+                                                                                        <!-- fallback 1 -->
+                                                                                        <a href="https://www.youtube.com/watch?v=DGeTa4v-LdA" ><img height="137" 
+                                                                                          src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/76a65b5e-c5ac-4c76-a4b3-5299f657dd33.png" width="137" /></a>
+                                                                                  </video>
+                                                                                  </div>
+
+                                                                                  <!-- fallback section -->
+                                                                                  <div class="video-fallback">
+                                                                                    <a href="https://www.youtube.com/watch?v=DGeTa4v-LdA" ><img height="137" 
+                                                                                      src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/76a65b5e-c5ac-4c76-a4b3-5299f657dd33.png" width="137" /></a>
+                                                                                  </div>
+
+                                                                                </span>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+
+                                                                <td width="5px"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="background: white;padding: 10px;">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td style="font-size:14px;font-weight:600; text-transform: uppercase; line-height: 1.4em; margin: 10px 0;color:#3685b3;font-family:'Helvetica','Arial',sans-serif;">
+                                                                    <a href="#" style="text-decoration:none;color:#888c8f;" target="_blank">Article Title</a>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td style="padding: 10px 0">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="center" style="width:60px; height: 60px; background-color: #eee;border-radius: 4px;">
+                                                                                            <span style="background: #fff;border-radius:4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/577a944d-0ebb-4aaf-a8d2-803c7fc92912.jpg" width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="65%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-right: 1px solid #EFEFEF;">
+                                                                                                <tr>
+                                                                                                    <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 19px;">
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a> has published document
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                                                    </td>
+
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="20%" style="vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            22 Mar 2018,
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            16:45
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
 
 
-                            </table>
-                          </td>
+                                    <tr>
+                                        <td width="100%" height="30"></td>
+                                      </tr>
+
+                                      <!--link-->
+                                      <tr>
+                                        <td style="border: 1px solid #e8eced;background:#fafafa;border-radius: 4px;">
+                                            <table width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/71838b9b-3ae9-4a40-ad2f-1d3c167e3246.jpg" alt="img" width="410" height="289" style="border-radius: 3px;width: 100%;max-width: 410px; height: 290px;">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td class="mobile" width="30%" style="padding: 0 0 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="center" style="width:137px; height: 137px; border-radius: 4px;">
+                                                                              <a href="">
+                                                                                <span style="border-radius:4px;width: 137px;line-height: 35px;height: 137px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;">
+                                                                                  <img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/27117dbe-a169-4a3e-b9df-557e04bf93ee.png" height="137" width="137">
+                                                                                </span>
+                                                                              </a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+
+                                                                <td class="mobile" width="70%" style="padding: 0 0 0 0;vertical-align: top;">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td align="left">
+                                                                                <span style="border-radius:4px;line-height: 35px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;">
+                                                                                  <a href=""  style="text-decoration: none;color:#888c8f;">Google</a>
+                                                                                </span>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                          <td align="left">
+                                                                              <a href="" style="text-decoration: none;color:#888c8f;"> &copy; 2018 </a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </table>
+                                                                </td>
+
+                                                                <td width="5px"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td style="background: white;padding: 10px;">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                          
+                                                            <tr>
+                                                                <td style="padding: 10px 0">
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                        <tr>
+                                                                            <td class="mobile" width="12%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td align="center" style="width:60px; height: 60px; background-color: #eee;border-radius: 4px;">
+                                                                                            <span style="background: #fff;border-radius:4px;width: 60px;line-height: 35px;height: 60px;display: inline-block;font-size: 24px;display: table;vertical-align: middle;text-align: center;"><img src="https://gallery.mailchimp.com/87e743b323fe4f403a6b7f924/images/577a944d-0ebb-4aaf-a8d2-803c7fc92912.jpg" width="60" height="60" style="border-radius: 4px;" /></span>
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="65%" style="padding: 0 7px 0 0;vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-right: 1px solid #EFEFEF;">
+                                                                                                <tr>
+                                                                                                    <td style="color: #888c8f; font-size:12px; font-family:'Helvetica','Arial',sans-serif;line-height: 19px;">
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f; font-weight: 600;text-transform: uppercase;" target="_blank">Alexandre Collet Diame</a> has posted quickpost in
+                                                                                                        <a href="#" style="text-decoration:none;color:#888c8f;font-weight: 600;text-transform: uppercase;" target="_blank">Achats</a>
+                                                                                                    </td>
+
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+
+                                                                            <td width="5px"></td>
+                                                                            <td class="mobile" width="20%" style="vertical-align: top;">
+                                                                                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            22 Mar 2018,
+                                                                                        </td>
+                                                                                    </tr>
+
+                                                                                    <tr>
+                                                                                        <td style="font-size: 10px;line-height: 19px;margin: 5px 0 10px 0px;font-family:'Helvetica','Arial',sans-serif;font-size:10px;font-weight:normal;color: #888c8f;">
+                                                                                            16:45
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td width="5px"></td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
 
 
-                          <td class="mobile" width="15%" style="padding: 0 0 0 0;vertical-align: top;">
-                            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                      <tr>
+                                        <td width="100%" height="30"></td>
+                                      </tr>
+                                      
+                                   </table>
+                                 </td>
+
+                                <td class="mobile" width="15%" style="padding: 0 0 0 0;vertical-align: top;">
+                                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                  </table>
+                                </td>
+                              </tr>
                             </table>
                           </td>
                         </tr>
-                  </table>
+
+                    </table>
                 </td>
-              </tr>
-            
-            
-          </table>
-        </td>
-      </tr>
-    </table>
+            </tr>
+        </table>
 
-   <table>
-    <tr>
-                      <td width="100%" height="10"></td>
-                    </tr>
-  </table>
+        <table>
+            <tr>
+                <td width="100%" height="10"></td>
+            </tr>
+        </table>
 
-   <table width="100%" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td align="center" valign="top" style="padding:0;">
-                <table width="580" cellpadding="0" cellspacing="0" border="0" class="wrapper">
-                  <tr>
-                    <td style="border-collapse:collapse;color:#7f8386;font-family:'Helvetica','Arial',sans-serif;font-size:14px;font-weight:normal;line-height:19px;margin:0;padding:0;vertical-align:top;word-break:break-word;">
-                          Articles here are from following communities:
-                      </td>
-                  </tr>
-                  <tr>
-                    <td style="font-family:'Helvetica','Arial',sans-serif;font-size: 11px;padding: 5px 0;">
-                      <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
-                       <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
-                       <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
-                       <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
-                       <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
-                       <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
-                       <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
-                       <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
-                       <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
-                       <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" valign="top" style="padding:0;">
+                    <table width="580" cellpadding="0" cellspacing="0" border="0" class="wrapper">
+                        <tr>
+                            <td style="border-collapse:collapse;color:#7f8386;font-family:'Helvetica','Arial',sans-serif;font-size:14px;font-weight:normal;line-height:19px;margin:0;padding:0;vertical-align:top;word-break:break-word;">
+                                Articles here are from following communities:
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-family:'Helvetica','Arial',sans-serif;font-size: 11px;padding: 5px 0;line-height: 17px;">
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
+                                <a href="#" style="text-decoration:none;color:#7f8386;" target="_blank">Community Name Ressources Humaines,</a>
 
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td width="100%" height="10"></td>
+            </tr>
+        </table>
+
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" style="background: #ffffff;">
+            <tbody>
+                <tr>
+                    <td style="padding:0;" valign="top" align="center">
+                        <!-- Start Wrapper  -->
+                        <table class="wrapper" width="580" cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                                <tr>
+                                    <td style="font-size:10px; line-height:10px;" height="15">&nbsp;</td>
+                                    <!-- Spacer -->
+                                </tr>
+                                <tr>
+                                    <td align="center">
+
+                                        <!-- Start Container  -->
+                                        <table class="container" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="mobile" style="padding: 0;" width="400" align="center">
+                                                        <table>
+
+                                                            <tr>
+                                                                <td width="100%" height="10"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td style="border-collapse:collapse;color:#4d4d4d;font-family:'Helvetica','Arial',sans-serif;font-size:11px;font-weight:normal;line-height:19px;margin:0;padding:0;text-align:center;vertical-align:top;word-break:break-word;">
+                                                                    <a href="#" style="color:#9b9b9b;text-decoration:none" target="_blank">Change Digest preferences.</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" height="10"></td>
+                                                            </tr>
+
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="font-size:10px; line-height:10px;" class="mobileOn" height="10">&nbsp;</td>
+                                                    <!-- Spacer -->
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <!-- Start Container  -->
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- End Wrapper  -->
                     </td>
-                  </tr>
-                  </table>               
-            </td>
-        </tr>
-    </table>
-
-     <table>
-    <tr>
-                      <td width="100%" height="10"></td>
-                    </tr>
-  </table>
-   
-    <table width="100%" cellspacing="0" cellpadding="0" border="0" style="background: #ffffff;">
-        <tbody><tr>
-            <td style="padding:0;" valign="top" align="center">
-                 <!-- Start Wrapper  -->
-                 <table class="wrapper" width="580" cellspacing="0" cellpadding="0" border="0">
-                     <tbody><tr>
-                         <td style="font-size:10px; line-height:10px;" height="15">&nbsp;</td> <!-- Spacer -->
-                     </tr>
-                     <tr>
-                         <td align="center">
-                                  
-                             <!-- Start Container  -->
-                             <table class="container" width="100%" cellspacing="0" cellpadding="0" border="0">
-                                 <tbody>
-                                    <tr>
-                                     <td class="mobile" style="padding: 0;" width="400" align="center">
-                                      <table>
-                                        
-                                      
-                                        <tr>
-                                          <td width="100%" height="10"></td>
-                                        </tr>
-                                        <tr>
-                                          <td style="border-collapse:collapse;color:#4d4d4d;font-family:'Helvetica','Arial',sans-serif;font-size:11px;font-weight:normal;line-height:19px;margin:0;padding:0;text-align:center;vertical-align:top;word-break:break-word;">
-                                              <a href="#" style="color:#9b9b9b;text-decoration:none" target="_blank">Change Digest preferences.</a>
-                                           </td>
-                                        </tr>
-                                        <tr>
-                                          <td width="100%" height="10"></td>
-                                        </tr>
-                                                         
-                                       </table>
-                                     </td>                   
-                                 </tr>
-                                 <tr>
-                                 <td style="font-size:10px; line-height:10px;" class="mobileOn" height="10">&nbsp;</td> <!-- Spacer -->
-                              </tr>
-                             </tbody></table>
-                             <!-- Start Container  -->                   
-                                  
-                         </td>
-                     </tr>                      
-                 </tbody></table> 
-                 <!-- End Wrapper  -->                    
-            </td>
-        </tr>
-    </tbody></table>
-  </center>
+                </tr>
+            </tbody>
+        </table>
+    </center>
 </body>
+
 </html>
